@@ -53,6 +53,7 @@
 		9E4F644A1ED818340087E639 /* NRT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E4F64221ED818340087E639 /* NRT.jpg */; };
 		9E4F644B1ED818340087E639 /* LAX.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E4F64231ED818340087E639 /* LAX.jpg */; };
 		9E4F644C1ED818340087E639 /* SFO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E4F64241ED818340087E639 /* SFO.jpg */; };
+		9E99B7EE1EDDA0930012997C /* AirportShownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99B7ED1EDDA0930012997C /* AirportShownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		9E4F64221ED818340087E639 /* NRT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = NRT.jpg; path = "../../Airports Data/NRT.jpg"; sourceTree = "<group>"; };
 		9E4F64231ED818340087E639 /* LAX.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LAX.jpg; path = "../../Airports Data/LAX.jpg"; sourceTree = "<group>"; };
 		9E4F64241ED818340087E639 /* SFO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = SFO.jpg; path = "../../Airports Data/SFO.jpg"; sourceTree = "<group>"; };
+		9E99B7ED1EDDA0930012997C /* AirportShownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportShownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				9E4F63E71ED814420087E639 /* AppDelegate.swift */,
 				9E4F63EB1ED814420087E639 /* Main.storyboard */,
+				9E99B7ED1EDDA0930012997C /* AirportShownViewController.swift */,
 				9E4F63F91ED814920087E639 /* ListTableViewController.swift */,
 				9E4F63EE1ED814420087E639 /* Assets.xcassets */,
 				9E4F63F01ED814420087E639 /* LaunchScreen.storyboard */,
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E99B7EE1EDDA0930012997C /* AirportShownViewController.swift in Sources */,
 				9E4F63E81ED814420087E639 /* AppDelegate.swift in Sources */,
 				9E4F63FA1ED814920087E639 /* ListTableViewController.swift in Sources */,
 			);
@@ -461,6 +465,7 @@
 				9E4F63F81ED814420087E639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

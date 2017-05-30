@@ -8,10 +8,18 @@
 
 import UIKit
 
+
+var selectedIndex = 0
+
 class ListTableViewController: UITableViewController {
 
+    func loadPlist() ->[[String:String]]{
+        let path = Bundle.main.path(forResource: "airports", ofType: "plist")
+        return NSArray.init(contentsOf: URL.init(fileURLWithPath: path!)) as! [[String:String]]
+    }
+    
+    
 
-    var aiportItems = [[String:String]]()
     
     @IBOutlet var table: UITableView!
     
@@ -30,32 +38,43 @@ class ListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func loadPlist() ->[[String:String]]{
-        let path = Bundle.main.path(forResource: "airports", ofType: "plist"")
-            return NSArray.init(contentsOf: URL.init(fileURLWithPath: path!)) as! [[String:String]]
-    }
+
+    
+
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 0
+        let airportListCount = loadPlist()
+        return airportListCount.count
         
     }
 
+    
+    @IBOutlet weak var airportNameShown: UILabel!
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "airportCell", for: indexPath)
-
+        
+        let airportList = loadPlist()
+        cell.textLabel?.text = airportList[indexPath.row]["Airport"]
+        cell.detailTextLabel?.text = airportList[indexPath.row]["IATA"]
 
         return cell
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
