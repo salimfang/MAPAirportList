@@ -45,7 +45,7 @@ class ListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-/*
+
         let airportList = loadPlist()
         var countryList: Set<String> = ["Germany"]
         
@@ -54,11 +54,9 @@ class ListTableViewController: UITableViewController {
         }
         
         return countryList.count
- */
-        return 1
-    }
 
-    /*
+        // return 1
+    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int)->String {
         
@@ -75,7 +73,7 @@ class ListTableViewController: UITableViewController {
         
     }
  
- */
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
