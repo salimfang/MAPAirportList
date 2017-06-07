@@ -45,10 +45,38 @@ class ListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-
+/*
+        let airportList = loadPlist()
+        var countryList: Set<String> = ["Germany"]
+        
+        for country in airportList {
+            countryList.insert(country["Country"]!)
+        }
+        
+        return countryList.count
+ */
         return 1
     }
 
+    /*
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int)->String {
+        
+        let airportList = loadPlist()
+        var countryList: Set<String> = ["Germany"]
+        
+        for country in airportList {
+            countryList.insert(country["Country"]!)
+        }
+        
+        let countryArray = Array(countryList)
+        
+        return countryArray[section]
+        
+    }
+ 
+ */
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         let airportListCount = loadPlist()
@@ -68,7 +96,6 @@ class ListTableViewController: UITableViewController {
 
         return cell
     }
-
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
